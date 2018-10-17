@@ -15,3 +15,15 @@ To prepare, clone this project and import it into your IDE. It uses Gradle for d
 ### Editing the tutorial
 
 If you wish to edit the slides, they exist in the `docs/_posts/` directory. Look at the [jekyll-revealjs](https://github.com/dploeger/jekyll-revealjs) theme for more information about how to code the slides.
+
+### Running the tutorial locally
+
+To run locally you'll need to do the following:
+
+```
+cd docs
+bundle install
+bundle exec jekyll serve
+```
+
+(N.B. this may require some other ruby environment setup - TBC)
