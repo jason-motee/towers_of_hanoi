@@ -4,3 +4,4 @@ out/
 .gradle
 build/
 docs/_site/
+docs/Gemfile.lock
