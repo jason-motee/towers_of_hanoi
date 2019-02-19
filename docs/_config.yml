@@ -1,18 +1,18 @@
 # Your presentation title
 title: SET THIS IN _config.yml
 
-remote_theme: autotraderuk/jekyll-revealjs@v1.4
+remote_theme: autotraderuk/jekyll-revealjs@v1.5.1
 plugins:
   - jekyll-remote-theme
 
 # The Reveal theme
-reveal_theme: league.css
+reveal_theme: at.css
 
 # The Reveal transition
 reveal_transition: default
 
 # Path to the used theme (defaults to the Reveal.js standard theme path)
-reveal_theme_path: assets/reveal.js/css/theme/ 
+reveal_theme_path: assets/
 
 # Additional custom CSS paths
 extra_css: 
@@ -36,3 +36,7 @@ reveal_path: assets/reveal.js/
 markdown: redcarpet
 highlighter: rouge
 markdown_ext: ignoreme
+
+
+sass:
+  sass_dir: _site/assets
