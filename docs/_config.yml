@@ -39,4 +39,4 @@ markdown_ext: ignoreme
 
 
 sass:
-  sass_dir: _site/assets
+  sass_dir: assets
