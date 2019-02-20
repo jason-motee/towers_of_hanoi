@@ -1,7 +1,7 @@
 # Your presentation title
 title: SET THIS IN _config.yml
 
-remote_theme: autotraderuk/jekyll-revealjs@v1.5.1
+remote_theme: autotraderuk/jekyll-revealjs
 plugins:
   - jekyll-remote-theme
 
@@ -12,7 +12,7 @@ reveal_theme: at.css
 reveal_transition: default
 
 # Path to the used theme (defaults to the Reveal.js standard theme path)
-reveal_theme_path: assets/
+reveal_theme_path: assets/css/
 
 # Additional custom CSS paths
 extra_css: 
