@@ -6,13 +6,13 @@ plugins:
   - jekyll-remote-theme
 
 # The Reveal theme
-reveal_theme: league.css
+reveal_theme: at.css
 
 # The Reveal transition
 reveal_transition: default
 
 # Path to the used theme (defaults to the Reveal.js standard theme path)
-reveal_theme_path: assets/reveal.js/css/theme/ 
+reveal_theme_path: assets/css/
 
 # Additional custom CSS paths
 extra_css: 
@@ -34,5 +34,9 @@ reveal_path: assets/reveal.js/
 
 # Don't change anything below
 markdown: redcarpet
-highlighter: pygments
+highlighter: rouge
 markdown_ext: ignoreme
+
+
+sass:
+  sass_dir: assets
