@@ -1,5 +1,5 @@
 # Your presentation title
-title: SET THIS IN _config.yml
+title: Computational Thinking
 
 remote_theme: autotraderuk/jekyll-revealjs
 plugins:
