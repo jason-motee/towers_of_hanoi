@@ -40,7 +40,7 @@ public class TowerTest {
     }
 
     @Test
-    public void checkDiscSizesAreInDescendingOrder() {
+    public void checkDiscSizesAreInAscendingOrder() {
         // given
         tower.initialiseDiscsOntoTower(2);
 

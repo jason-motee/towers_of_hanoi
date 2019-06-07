@@ -3,13 +3,13 @@ package tutorial;
 import java.util.Arrays;
 import java.util.List;
 
-public class Game {
+class Game {
 
     private Tower towerOne = new Tower();
     private Tower towerTwo = new Tower();
     private Tower towerThree = new Tower();
     private List<Tower> towersOfHanoi = Arrays.asList(towerOne, towerTwo, towerThree);
-    private List<Integer[]> moves = Arrays.asList(new Integer[]{0, 1}, new Integer[]{0, 2}, new Integer[]{1, 2});
+    private List<Move> moves = Arrays.asList(new Move(0, 1), new Move(0, 2), new Move(1, 2));
 
     Tower getTower(int index) {
         return towersOfHanoi.get(index);
@@ -22,8 +22,8 @@ public class Game {
 
     void solve() {
         while(!isComplete()){
-            for (Integer[] move:moves) {
-                moveDisc(move[0], move[1]);
+            for (Move move:moves) {
+                moveDisc(move.getFromPosition(), move.getToPosition());
                 if(isComplete()) {
                     break;
                 }
@@ -32,14 +32,17 @@ public class Game {
     }
 
     void moveDisc(int fromTower, int toTower) {
+        Tower startingTower = towersOfHanoi.get(fromTower);
+        Tower finishingTower = towersOfHanoi.get(toTower);
+
         if (!moveIsIllegal(fromTower, toTower)) {
-            towersOfHanoi.get(toTower).addDisc(towersOfHanoi.get(fromTower).removeTopDisc());
+            finishingTower.addDisc(startingTower.removeTopDisc());
         } else {
-            towersOfHanoi.get(fromTower).addDisc(towersOfHanoi.get(toTower).removeTopDisc());
+            startingTower.addDisc(finishingTower.removeTopDisc());
         }
     }
 
-    boolean isComplete() {
+    private boolean isComplete() {
         return towerOne.getDiscs().isEmpty() && towerTwo.getDiscs().isEmpty();
     }
 
@@ -52,8 +55,8 @@ public class Game {
 
     private void adjustMovesIfOdd(int numberOfDiscs) {
         if (!(numberOfDiscs % 2 == 0)) {
-            moves.get(0)[1] = 2;
-            moves.get(1)[1] = 1;
+            moves.get(0).setToPosition(2);
+            moves.get(1).setToPosition(1);
         }
     }
 }

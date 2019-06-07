@@ -17,18 +17,6 @@ public class GameTest {
     }
 
     @Test
-    public void checkWhenGameIsComplete() {
-        // given
-        game.initialiseGame(1);
-
-        // when
-        boolean isComplete = game.isComplete();
-
-        // then
-        assertThat(isComplete).isFalse();
-    }
-
-    @Test
     public void checkGameHasBeenInitialisedWithOneDisc() {
         // given
         game.initialiseGame(1);

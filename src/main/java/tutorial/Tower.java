@@ -24,7 +24,7 @@ class Tower {
         return discs.pop();
     }
 
-    Disc addDisc(Disc disc) {
-        return discs.push(disc);
+    void addDisc(Disc disc) {
+        discs.push(disc);
     }
 }
