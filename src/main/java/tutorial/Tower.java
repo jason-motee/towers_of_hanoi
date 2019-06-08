@@ -20,7 +20,7 @@ class Tower {
         return discs.size();
     }
 
-    Disc removeTopDisc() {
+    Disc removedTopDisc() {
         return discs.pop();
     }
 

@@ -32,7 +32,7 @@ public class TowerTest {
         tower.initialiseDiscsOntoTower(1);
 
         // when
-        Disc actual = tower.removeTopDisc();
+        Disc actual = tower.removedTopDisc();
         Disc expected = new Disc(1);
 
         // then

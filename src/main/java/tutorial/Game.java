@@ -36,9 +36,9 @@ class Game {
         Tower finishingTower = towersOfHanoi.get(toTower);
 
         if (!moveIsIllegal(fromTower, toTower)) {
-            finishingTower.addDisc(startingTower.removeTopDisc());
+            finishingTower.addDisc(startingTower.removedTopDisc());
         } else {
-            startingTower.addDisc(finishingTower.removeTopDisc());
+            startingTower.addDisc(finishingTower.removedTopDisc());
         }
     }
 
