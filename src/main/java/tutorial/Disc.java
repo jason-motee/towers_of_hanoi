@@ -10,6 +10,7 @@ public class Disc {
         this.size = size;
     }
 
+    //do we need to expose?
     int getSize() {
         return size;
     }
